@@ -13,6 +13,16 @@ app.use(morgan("dev")); // logs all the incoming req information
 // app.use(cors()); // allow cross origin resources
 app.use(express.json()); //convert incoming data in the req.body
 
+//mongoDb connection
+import { connectDB } from "./src/config/dbConfig.js";
+connectDB();
+
+app.use("*", (req, res) => {
+  res.json({
+    message: "you are in the wrong place, go back !",
+  });
+});
+
 app.listen(PORT, (error) => {
   error
     ? console.log(error)
