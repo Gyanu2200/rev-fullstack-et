@@ -17,7 +17,12 @@ app.use(express.json()); //convert incoming data in the req.body
 import { connectDB } from "./src/config/dbConfig.js";
 connectDB();
 
+// routers
+import userRouter from "./src/routers/userRouter.js";
+app.use("/api/v1/user", userRouter);
+
 app.use("*", (req, res) => {
+  //need to understand about this line "*"
   res.json({
     message: "you are in the wrong place, go back !",
   });

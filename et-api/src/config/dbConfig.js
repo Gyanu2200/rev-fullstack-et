@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 
+//discuss about this as well/ recall and how it is connected with server
 export const connectDB = () => {
   try {
     const connStr = "mongodb://localhost:27017/aug_transaction";
