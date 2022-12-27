@@ -28,6 +28,15 @@ app.use("*", (req, res) => {
   });
 });
 
+// global error handler
+app.use((error, req, res, next) => {
+  const code = error.code || 500;
+  res.status(code).json({
+    status: "error",
+    message: error.message,
+  });
+});
+
 app.listen(PORT, (error) => {
   error
     ? console.log(error)

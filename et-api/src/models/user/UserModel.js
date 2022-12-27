@@ -1,4 +1,4 @@
-import UserSchema from "./userSchema";
+import UserSchema from "./UserSchema.js";
 
 // now on this userSchema we gonna do queries, what are the queries we need:
 
