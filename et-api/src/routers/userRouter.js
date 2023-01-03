@@ -1,5 +1,5 @@
 import express from "express";
-import { insertUser } from "../models/user/UserModel.js";
+import { insertUser, loginUser } from "../models/user/UserModel.js";
 
 const router = express.Router();
 
@@ -32,6 +32,25 @@ router.post("/", async (req, res, next) => {
         "There is already another user exist with the same email, please rest password to use or use different email to register.";
     }
     next(error); // we are forwarding this error to our global handler error in our server.js file
+  }
+});
+
+// create login users
+router.post("/login", async (req, res) => {
+  try {
+    const result = await loginUser(req.body);
+    console.log(result);
+    result?._id
+      ? res.json({
+          status: "success",
+          message: "login sucessful",
+        })
+      : res.json({
+          status: "error",
+          message: "login is not successful",
+        });
+  } catch (error) {
+    next(error);
   }
 });
 

@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 8000;
 //middlewares - the code that we run during the request, response lifecycle
 app.use(morgan("dev")); // logs all the incoming req information
 // app.use(helmet()) // setting default security headers to protect some attacks
-// app.use(cors()); // allow cross origin resources
+app.use(cors()); // allow cross origin resources
 app.use(express.json()); //convert incoming data in the req.body
 
 //mongoDb connection

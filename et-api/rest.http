@@ -1,0 +1,8 @@
+###
+POST http://localhost:8000/api/v1/user/login
+Content-Type: application/json
+
+{   
+    "email":"gy@gmail.com",
+    "pin":1234
+}

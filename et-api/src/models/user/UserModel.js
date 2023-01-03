@@ -14,3 +14,6 @@ export const insertUser = (obj) => {
 };
 
 // login user
+export const loginUser = (obj) => {
+  return UserSchema.findOne(obj);
+};
