@@ -4,6 +4,7 @@ import mongoose from "mongoose";
 export const connectDB = () => {
   try {
     const connStr = "mongodb://localhost:27017/aug_transaction";
+    mongoose.set("strictQuery", true);
     const conn = mongoose.connect(connStr);
 
     conn

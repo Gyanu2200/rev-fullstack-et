@@ -1,8 +1,4 @@
 ###
-POST http://localhost:8000/api/v1/user/login
+GET  http://localhost:8000/api/v1/transaction
 Content-Type: application/json
-
-{   
-    "email":"gy@gmail.com",
-    "pin":1234
-}
+Authorization: "63aa6a3a1089881856ae30ef"

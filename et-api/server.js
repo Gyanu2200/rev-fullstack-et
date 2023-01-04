@@ -21,6 +21,10 @@ connectDB();
 import userRouter from "./src/routers/userRouter.js";
 app.use("/api/v1/user", userRouter);
 
+//transaction router
+import transRouter from "./src/routers/TransactionRouter.js";
+app.use("/api/v1/transaction", transRouter);
+
 app.use("*", (req, res) => {
   //need to understand about this line "*"
   res.json({
