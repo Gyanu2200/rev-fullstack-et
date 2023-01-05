@@ -1,0 +1,13 @@
+.layout {
+  background: linear-gradient(rgb(180, 163, 163), rgb(214, 214, 179));
+}
+
+.login-page {
+  width: 400px;
+  border: 1px solid rgb(239, 235, 235);
+  padding: 2rem;
+  background: rgba(194, 185, 185, 0.749);
+  margin: auto;
+  box-shadow: -5px 5px 5px 5px grey;
+  border-radius: 5px;
+}
